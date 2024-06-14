@@ -1,4 +1,4 @@
-import Comment from '../models/comment.model.js' 
+import Comment from '../models/comment.model.js'
 import User from '../models/user.model.js'
 
 export const createComment = async (req, res) => {

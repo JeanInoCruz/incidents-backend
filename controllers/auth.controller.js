@@ -18,7 +18,7 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body
-    console.log('Request Body:', req.body) 
+    console.log('Request Body:', req.body)
 
     const user = await User.findOne({ where: { email } })
     console.log('User:', user)
