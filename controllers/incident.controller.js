@@ -1,4 +1,4 @@
-import Incident from '../models/incident.model.js' // Asegúrate de que incident.model.js tenga la extensión .js si es un archivo JavaScript
+import Incident from '../models/incident.model.js'
 import multer from 'multer'
 import User from '../models/user.model.js'
 

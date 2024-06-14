@@ -1,4 +1,4 @@
-import Comment from '../models/comment.model.js' // Asegúrate de que comment.model.js tenga la extensión .js si es un archivo JavaScript
+import Comment from '../models/comment.model.js' 
 import User from '../models/user.model.js'
 
 export const createComment = async (req, res) => {
