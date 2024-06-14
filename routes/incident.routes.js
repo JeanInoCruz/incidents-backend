@@ -5,7 +5,7 @@ import { createIncident, getIncidents, updateIncident, deleteIncident } from '..
 const router = express.Router()
 
 router.post('/incidents', authenticateToken, createIncident)
-router.get('/incidents', getIncidents)
+router.get('/incidents', authenticateToken, getIncidents)
 
 router.put('/:id', authenticateToken, updateIncident)
 

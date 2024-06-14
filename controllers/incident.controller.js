@@ -30,7 +30,12 @@ export const createIncident = [
 
 export const getIncidents = async (req, res) => {
   try {
-    const incidents = await Incident.findAll({ include: User })
+    let incidents
+    if (req.user.role === 'admin') {
+      incidents = await Incident.findAll({ include: User })
+    } else if (req.user.role === 'resident') {
+      incidents = await Incident.findAll({ where: { userId: req.user.id }, include: User })
+    }
     res.json(incidents)
   } catch (error) {
     res.status(500).json({ message: error.message })

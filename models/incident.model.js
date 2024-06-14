@@ -48,6 +48,10 @@ const Incident = db.define('Incident', {
     type: DataTypes.ENUM('pending', 'in_progress', 'resolved'),
     allowNull: false,
     defaultValue: 'pending'
+  },
+  createdAt: {
+    type: DataTypes.DATE,
+    allowNull: false
   }
 })
 
